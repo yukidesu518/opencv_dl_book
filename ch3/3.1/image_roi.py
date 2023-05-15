@@ -4,6 +4,7 @@ import cv2
 img = cv2.imread('yorkie.png', cv2.IMREAD_COLOR)
 
 # ROI[top:bottom, left:right]を使って画像データを切り出す
+# ここでは直接数値を指定して切り抜いている
 img_roi = img[135:320, 150:290]
 
 # 画像をウィンドウ表示する

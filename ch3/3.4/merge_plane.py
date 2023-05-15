@@ -6,6 +6,7 @@ g_plane = cv2.imread('yorkie_split_green.png', cv2.IMREAD_GRAYSCALE)
 r_plane = cv2.imread('yorkie_split_red.png', cv2.IMREAD_GRAYSCALE)
 
 # プレーンの統合
+# cv2.merge(mv[, dst])
 merged = cv2.merge((b_plane, g_plane, r_plane))
 
 # 画像をウィンドウ表示する

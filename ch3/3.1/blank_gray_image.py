@@ -3,7 +3,7 @@ import cv2
 
 width = 200
 height = 100
-value = 128
+value = 255
 
 # width=200、height=100、画素値0で埋めたグレースケール画像を生成
 img1 = np.zeros((height, width), np.uint8)

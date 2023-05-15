@@ -9,6 +9,7 @@ beta = 0.5
 gamma = 0.0
 
 # ピクセルごとに重み付け合成を行う
+# cv2.addWeight(src1, alpha, src2, beta, gamma[, dst[, dtype]])
 dst = cv2.addWeighted(src1, alpha, src2, beta, gamma)
 
 # 画像をウィンドウ表示する

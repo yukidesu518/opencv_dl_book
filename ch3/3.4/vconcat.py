@@ -6,6 +6,7 @@ img1 = cv2.imread('yorkie.png', cv2.IMREAD_COLOR)
 img2 = cv2.imread('yorkie_flip_0.png', cv2.IMREAD_COLOR)
 
 # 画像を垂直方向に連結
+# cv2.vconcat(src[, dst])
 vconcat_img = cv2.vconcat([img1, img2])
 
 cv2.imshow('img1', img1)

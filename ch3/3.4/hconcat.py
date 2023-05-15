@@ -5,6 +5,7 @@ img1 = cv2.imread('yorkie.png', cv2.IMREAD_COLOR)
 img2 = cv2.imread('yorkie_flip_0.png', cv2.IMREAD_COLOR)
 
 # 画像を水平方向に連結
+# cv2.hconcat(src[, dst])
 hconcat_img = cv2.hconcat([img1, img2])
 
 # 画像をウィンドウ表示する
