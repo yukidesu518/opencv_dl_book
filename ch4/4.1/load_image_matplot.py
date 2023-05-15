@@ -1,3 +1,7 @@
+#
+# jupyter labなどで表示する方法
+#
+
 import cv2
 import matplotlib.pyplot as plt # Matplotlibをimport
 
