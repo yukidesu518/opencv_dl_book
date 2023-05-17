@@ -23,3 +23,7 @@ for i, (title, img) in enumerate(zip(titles, images)):
     plt.title(title)
 
 plt.show()
+
+
+
+
