@@ -25,3 +25,4 @@ for index, (flag, name) in enumerate(zip(flags, flags_name)):
     ax.title.set_text(name)
     ax.imshow(rotation_img, 'gray')
 
+plt.show()  # 結果を表示する

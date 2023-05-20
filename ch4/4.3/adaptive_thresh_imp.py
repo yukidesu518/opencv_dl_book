@@ -2,6 +2,10 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
+# adaptive_thresh.pyのth = cv2.adaptiveThreshold(img_gray, 255, \
+#        cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 21, 4)
+# が分かりづらいので自前で実装
+
 # 元の画像
 img = cv2.cvtColor(cv2.imread('drivecam.jpg'), cv2.COLOR_BGR2GRAY)
 cv2.imshow('1. original', img)

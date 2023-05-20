@@ -8,6 +8,19 @@ src_img = np.full((100,500,3), 255, dtype=np.uint8)
 # 適当にいくつかの色を生成
 v = (50, 200)
 colors = [(b,g,r) for b in v for g in v for r in v]
+
+# 上の２行は以下と同じ
+# values = (50, 200)
+# colors = []
+
+# for blue in values:
+#     for green in values:
+#         for red in values:
+#             color = (blue, green, red)
+#             colors.append(color)
+
+print(colors)
+
 for i, color in enumerate(colors):
     cv2.circle(src_img, (i*60+40,50), 30, color, -1)
 

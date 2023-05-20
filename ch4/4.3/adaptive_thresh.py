@@ -13,6 +13,9 @@ for thresh in range(30, 150, 30):
 ret, th = cv2.threshold(img_gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 cv2.imshow(f'Otsu (threshold={ret})', th)
 
+
+# cv2.ADAPTIVE_THRESH_GAUSSIAN_Cでガウシアンフィルタを適用
+# （cv2.ADATIVE.MEAN_Cでメディアんフィルタ）
 th = cv2.adaptiveThreshold(img_gray, 255, \
         cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 21, 4)
 cv2.imshow(f'adaptiveThreshold', th)
