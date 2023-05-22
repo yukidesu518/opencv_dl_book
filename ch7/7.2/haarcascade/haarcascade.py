@@ -7,8 +7,8 @@ import numpy as np
 def main():
     # キャプチャを開く
     directory = os.path.dirname(__file__)
-    capture = cv2.VideoCapture(os.path.join(directory, "face.jpg"))  # 画像ファイル
-    # capture = cv2.VideoCapture(0)  # カメラ
+    capture = cv2.VideoCapture(os.path.join(directory, "test.jpg"))  # 画像ファイル
+    # capture = cv2.VideoCapture(0)  # 内臓カメラ
     if not capture.isOpened():
         raise IOError("can't open capture!")
 
