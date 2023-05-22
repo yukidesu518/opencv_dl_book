@@ -31,3 +31,27 @@ cv2.VideoCapture(index[, apiPreference])
 | index         | カメラID（USBカメラなどから読み込みたいとき）                                      |
 | apiPreference | OpenCVのバックエンドで、どのAPIを利用するか（デフォルトはcv2.CAP_ANYで、自動的に最適なものが選択される） |
 | 戻り値           | VideoCaptureオブジェクトが返される                                        |
+
+## 静止画の書き込み(imwrite)
+```python:静止画の書き込み(imwrite)
+cv2.imwrite(filename, img[, params])
+```
+
+| 引数       | 説明         |
+| -------- | ---------- |
+| filename | 出力画像のファイル名 |
+| img      | 出力する画像     |
+| params   | 出力フォーマットに応じて指定できるパラメータ           |
+
+## 動画の書き込み(VideoWriter)
+
+```python:動画の書き込み(VideoWriter)
+cv2.VideoWriter(filename, fourcc, fps, frameSize[, isColor])
+```
+
+| 引数       | 説明         |
+| -------- | ---------- |
+| filename | 出力動画のファイル名 |
+| fourcc   | コーデック      |
+| fps      | フレームレート    |
+| isColor  | Trueならカラー、Falseならグレースケールで出力           |
