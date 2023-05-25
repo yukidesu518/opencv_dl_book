@@ -87,19 +87,19 @@ def main():
         thickness = 1
         cv2.putText(image, result, point, font, scale, color, thickness, cv2.LINE_AA)
 
-        # 推論結果を取得する
+        # #推論結果を取得する
         # confidences = model.predict(image)
         # confidences = np.squeeze(confidences)
 
-        # 必要な場合はSoftMax関数で信頼度を[0.0-1.0]の範囲に変換する
-        # ここで扱うEfficientNetの学習済みモデルにはSoftMaxレイヤーが含まれないため必要
+        # #必要な場合はSoftMax関数で信頼度を[0.0-1.0]の範囲に変換する
+        # #ここで扱うEfficientNetの学習済みモデルにはSoftMaxレイヤーが含まれないため必要
         # confidences = softmax(confidences)
 
-        # 信頼度が上位5個のクラスを取得する
+        # #信頼度が上位5個のクラスを取得する
         # top_n = 5
         # class_ids = np.argsort(-confidences)[:top_n:]
 
-        # 信頼度が上位5個のクラスを表示する
+        # #信頼度が上位5個のクラスを表示する
         # for i, class_id in enumerate(class_ids):
         #     label = classes[class_id]
         #     confidence = confidences[class_id]

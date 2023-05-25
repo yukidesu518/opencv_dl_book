@@ -21,8 +21,8 @@ def softmax(confidences):
 def main():
     # キャプチャを開く
     directory = os.path.dirname(__file__)
-    capture = cv2.VideoCapture(os.path.join(directory, "yorkie.jpg"))  # 画像ファイル
-    # capture = cv2.VideoCapture(0)  # カメラ
+    # capture = cv2.VideoCapture(os.path.join(directory, "yorkie.jpg"))  # 画像ファイル
+    capture = cv2.VideoCapture(0)  # カメラ
     if not capture.isOpened():
         raise IOError("can't open capture!")
 
