@@ -6,6 +6,7 @@ import cv2
 import numpy as np
 
 
+
 # ジョイントタイプ（関節の名前）
 class joints(enum.IntEnum):
     NOSE = 0
