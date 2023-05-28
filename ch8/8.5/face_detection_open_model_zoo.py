@@ -31,3 +31,4 @@ _, _, boxes = model.detect(frame, confidence_threshold, nms_threshold)
 # 検出した顔のバウンディングボックスを描画する
 for box in boxes:
     cv2.rectangle(frame, box, (0, 0, 255), 2, cv2.LINE_AA)
+
