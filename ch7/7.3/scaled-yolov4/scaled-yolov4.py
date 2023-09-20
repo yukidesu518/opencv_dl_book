@@ -33,12 +33,14 @@ def main():
     # モデルを読み込む
     # weights = os.path.join(directory, "yolov4-csp.weights")  # YOLOv4-csp (512x512, 640x640)
     # config = os.path.join(directory, "yolov4-csp.cfg")
-    weights = os.path.join(directory, "yolov4x-mish.weights")  # YOLOv4x-mish (640x640)
-    config = os.path.join(directory, "yolov4x-mish.cfg")
+    # weights = os.path.join(directory, "yolov4x-mish.weights")  # YOLOv4x-mish (640x640)
+    # config = os.path.join(directory, "yolov4x-mish.cfg")
     # weights = os.path.join(directory, "yolov4-p5.weights")  # YOLOv4-P5 (896x896)
     # config = os.path.join(directory, "yolov4-p5.cfg")
     # weights = os.path.join(directory, "yolov4-p6.weights")  # YOLOv4-P6 (1280x1280)
     # config = os.path.join(directory, "yolov4-p6.cfg")
+    weights = os.path.join(directory, "merge_yolov4.weights")  # yolo-fish
+    config = os.path.join(directory, "yolov4.cfg")
     model = cv2.dnn_DetectionModel(weights, config)
 
     # モデルの推論に使用するエンジンとデバイスを設定する
@@ -60,7 +62,7 @@ def main():
     model.setNmsAcrossClasses(False)  # （True: 全体、False: クラスごと）
 
     # クラスリストとカラーテーブルを取得する
-    names = os.path.join(directory, "coco.names")
+    names = os.path.join(directory, "fish.names")
     classes = read_classes(names)
     colors = get_colors(len(classes))
 
