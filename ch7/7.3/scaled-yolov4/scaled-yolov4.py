@@ -25,8 +25,8 @@ def get_colors(num):
 def main():
     # キャプチャを開く
     directory = os.path.dirname(__file__)
-    # capture = cv2.VideoCapture(os.path.join(directory, "fish.jpg"))  # 画像ファイル
-    capture = cv2.VideoCapture(0)  # カメラ
+    capture = cv2.VideoCapture(os.path.join(directory, "fish.jpg"))  # 画像ファイル
+    # capture = cv2.VideoCapture(0)  # カメラ
     if not capture.isOpened():
         raise IOError("can't open capture!")
 
@@ -53,8 +53,9 @@ def main():
     scale = 1.0 / 255.0     # スケールファクター
     # size = (512, 512)     # 入力サイズ（YOLOv4-csp）
     # size = (640, 640)       # 入力サイズ（YOLOv4-csp、YOLOv4x-mish）
-    size = (896, 896)     # 入力サイズ（YOLOv4-P5）
+    # size = (896, 896)     # 入力サイズ（YOLOv4-P5）
     # size = (1280, 1280)   # 入力サイズ（YOLOv4-P6）
+    size = (608, 608)   # 入力サイズ（Yolo-fish）
     mean = (0.0, 0.0, 0.0)  # 差し引かれる平均値
     swap = True             # チャンネルの順番（True: RGB、False: BGR）
     crop = False            # クロップ
